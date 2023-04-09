@@ -1,0 +1,108 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */
+@import "variables.scss";
+@import "type.scss";
+@import "bulma/css/bulma.css";
+
+// GLOBAL STYLES
+:root {
+  font-family: $sans;
+  font-size: calc(1rem + 0.5vw);
+  font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $background-color;
+  overflow-x: hidden;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.layout {
+  // width: 100%;
+  // min-height: 100vh;
+}
+// TYPOGRAPHY
+.sans {
+  font-family: Inter;
+}
+.serif {
+  font-family: Libre Baskerville;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
+  color: $primary-text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $serif;
+}
+
+h1 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1em;
+}
+h2 {
+  font-size: 2.2rem;
+  font-style: italic;
+}
+h3 {
+  font-size: 1.8rem;
+  font-style: italic;
+}
+h4 {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+h5,
+a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 2.6ex;
+}
+h6 {
+  // captioning
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+p {
+  font-size: 0.75rem;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+}
+// CLASSNAMES
+.border {
+  border: 0.08rem solid $primary-text;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.image_border {
+  border: 0.08rem solid $primary-text;
+  margin: -0.06em;
+  overflow: hidden;
+  img {
+    filter: grayscale(50%);
+    transition-duration: 0.8s;
+    &:hover {
+      filter: grayscale(0%);
+      transform: scale(1.04);
+    }
+  }
+}
