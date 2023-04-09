@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^1.0.0",
+    "@sveltejs/adapter-netlify": "^2.0.6",
     "@sveltejs/kit": "^1.0.0",
     "dotenv": "^16.0.3",
     "modern-normalize": "^1.1.0",
