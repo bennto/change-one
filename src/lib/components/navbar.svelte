@@ -10,7 +10,7 @@
     activity = bool;
   });
   function handleClick() {
-    active.set(!activity); 
+    active.set(!activity);
   }
 
   let menuHover = false;
@@ -19,16 +19,21 @@
   }
 
   let dropdown = false;
+  let mobile;
   let innerWidth;
   function setDropDown() {
     if(innerWidth <= 768) {
       dropdown = true;
+      mobile = true;
     } else {
       dropdown = false;
+      mobile = false
     }
   }
   function dropDropdown() {
-    dropdown = !dropdown;
+    if(!mobile) {
+      dropdown = !dropdown;
+    }
   }
   onMount(() => {
     setDropDown();
