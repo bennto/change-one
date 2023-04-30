@@ -1,34 +1,59 @@
 <script>
-  import Call from '$lib/components/call_2.svelte';
+  import Button from '$lib/components/button.svelte';
   import Image from '$lib/components/image.svelte';
   import { getFileUrl } from "$lib/getFileUrl.js"
+  import Icon from "$lib/assets/placeholder_icon.jpg";
   let placeholder = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
 </script>
 
 <div class="advocacy_container">
   <figure class="image_container image_border">
-    <img class="image" src={getFileUrl(placeholder)} loading="lazy" />
+    <img class="image" src={getFileUrl(placeholder)} loading="lazy" alt="placeholder" />
   </figure>
   <div class="mb-6 is-flex is-flex-direction-column is-align-items-center">
     <div class="column is-8">
       <h1 class="py-4">Support Services</h1>
       <h5 class="block">Change 1 provides support services to aid foster alumni in their transition from foster care to independence. Our goal is to provide alumni with the resources and support they need to succeed in all aspects of life. Whether it be help with education, housing, employment, or just someone to talk to, we are here to help.</h5>
-      <h5 class="block">The specific services we offer include:</h5>
     </div>
-    <div class="image_container column is-8 pw-2 m-0">
-      <Image url={placeholder} />
+    <div class="card_container column is-8">
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Job Security</h5>
+      </div>
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Health</h5>
+      </div>
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Food Insecurity</h5>
+      </div>
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Banking</h5>
+      </div>
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Housing</h5>
+      </div>
+      <div class="custom_card">
+        <img class="image" src={Icon} loading="lazy" alt="placeholder icon" />
+        <h5>Education</h5>
+      </div>
     </div>
-    <div class="column is-8">
-      <p class="block">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
+    <h2 class="pt-4">Our Process</h2>
+    <div class="column is-8 mb-4">
+      <h3 class="pb-2">Intake</h3>
+      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <h3 class="pb-2">Documentation</h3>
+      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <h3 class="pb-2">Assessment</h3>
+      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <h3 class="pb-2">Assignment</h3>
+      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
     </div>
-    <div class="column is-8">
-      <p class="block">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
-    </div>
-    <div class="column is-8">
-      <p class="block">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
-    </div>
+    <Button address={"/join"} text={'Support Form'} />
   </div>
-  <Call />
 </div>
 
 <style lang="scss">
@@ -50,6 +75,26 @@
     }
     h5, p {
       text-align: justify;
+    }
+    .card_container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      .custom_card {
+        width: 144px;
+        margin: 16px;
+        img {
+          width: 70%;
+          height: auto;
+          margin: auto;
+        }
+        :nth-child(2) {
+          margin-top: 12px;
+          text-align: center;
+          font-size: 0.9em;
+        }
+      }
     }
     .image_container:nth-child(2) {
       display: flex;

@@ -15,6 +15,14 @@ export async function load() {
     };
   }
   const posts = response.data;
+  response.data.map((post) => {
+    const initialDate = new Date(post.date_created);
+    let year = initialDate.getFullYear();
+    let month = initialDate.getMonth();
+    let day = initialDate.getDate();
+    let endDate = month + "/" + day + "/" + year;
+    post.date_created = endDate;
+  });
 
   return {
     posts,

@@ -1,6 +1,7 @@
 <script>
   import { getFileUrl } from '$lib/getFileUrl';
   export let event;
+  console.log(event.start_date)
 </script>
 
 <a class="link" href={`/events/${event.id}`}>
@@ -10,7 +11,7 @@
     </div>
     <div class="card_text">
       <h4>{event.name}</h4>
-      <h6>{event.start_date}</h6>
+      <h6>{event.start_date.outDate}</h6>
     </div>
   </div>
 </a>

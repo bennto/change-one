@@ -1,4 +1,5 @@
 import { getDirectusClient } from "$lib/directus.js";
+import { getDate } from "$lib/getDate.js";
 import { error } from "@sveltejs/kit";
 
 export async function load({ params }) {
@@ -15,17 +16,28 @@ export async function load({ params }) {
     });
   }
 
+  let event = response;
+
+  // format date and time
+  const startDate = new Date(event.start_date);
+  const endDate = new Date(event.end_date);
+
+  let dates = setDate(startDate, endDate);
+
   return {
-    event: {
-      id: response.id,
-      thumbnail: response.Event_thumbnail,
-      name: response.Event_name,
-      description: response.Event_description,
-      date: response.Event_date,
-      address: response.Event_address,
-      csz: response.Event_citystatezip,
-      url: response.Event_url,
-      slug: response.slug,
-    },
+    event,
+    dates,
   };
+}
+
+function setDate(start, end) {
+  let output = getDate(start);
+  let start_date = output.outDate;
+  let start_time = output.outTime;
+
+  output = getDate(end);
+  let end_date = output.outDate;
+  let end_time = output.outTime;
+
+  return { start_date, start_time, end_date, end_time };
 }

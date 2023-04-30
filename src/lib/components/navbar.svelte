@@ -68,9 +68,9 @@
         </div>
         <div class="list_container" on:click={handleClick}>
           <!-- <img class="event_image" src={getFileUrl('2eeb8eda-3533-42d2-8c00-5c7b10c7cd38.jpg')} loading="lazy" /> -->
-          <div class="menu_item" in:fly={{ x: -10, delay: 240 }} out:fly={{ x: -10, delay: 300}} ><a href="/about"><h3>About</h3></a></div>
+          <div class="menu_item" in:fly={{ x: -10, delay: 240 }} out:fly={{ x: -10, delay: 240}} ><a href="/about"><h3>About</h3></a></div>
           <div on:mouseenter={dropDropdown} on:mouseleave={dropDropdown} >
-            <div class="menu_item" in:fly={{ x: -10, delay: 300 }} out:fly={{ x: -10, delay: 240}}><a><h3>Our Work</h3></a></div>
+            <div class="menu_item" in:fly={{ x: -10, delay: 300 }} out:fly={{ x: -10, delay: 180}}><a><h3>Our Work</h3></a></div>
             {#if dropdown}
             <div class="menu_item drop" in:slide={{ delay: 120 }} out:slide ><a href="/advocacy" ><h4>Advocacy</h4></a></div>
             <div class="menu_item drop" in:slide={{ delay: 180 }} out:slide ><a href="/public_education" ><h4>Public Education</h4></a></div>
@@ -78,10 +78,10 @@
             <div class="menu_item drop" in:slide={{ delay: 300 }} out:slide ><a href="/training_consulting" ><h4>Training & Consulting</h4></a></div>
             {/if}
           </div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 360 }} out:fly={{ x: -10, delay: 180}} ><a href="/blog" ><h3>Blog</h3></a></div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 420 }} out:fly={{ x: -10, delay: 120}} ><a href="/events" ><h3>Events</h3></a></div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 480 }} out:fly={{ x: -10, delay: 60}} ><a href="/partners" ><h3>Partners</h3></a></div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 540 }} out:fly={{ x: -10}} ><a href="/join" ><h3>Join</h3></a></div>
+          <div class="menu_item" in:fly={{ x: -10, delay: 360 }} out:fly={{ x: -10, delay: 120}} ><a href="/blog" ><h3>Blog</h3></a></div>
+          <div class="menu_item" in:fly={{ x: -10, delay: 420 }} out:fly={{ x: -10, delay: 60}} ><a href="/events" ><h3>Events</h3></a></div>
+          <!-- <div class="menu_item" in:fly={{ x: -10, delay: 480 }} out:fly={{ x: -10, delay: 60}} ><a href="/partners" ><h3>Partners</h3></a></div> -->
+          <div class="menu_item" in:fly={{ x: -10, delay: 480 }} out:fly={{ x: -10}} ><a href="/join" ><h3>Join</h3></a></div>
         </div>
       </div>
     </div>

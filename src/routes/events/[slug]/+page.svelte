@@ -5,6 +5,7 @@
   
   export let data;
   let event = data.event;
+  let dates = data.dates;
 </script>
 
 <div class="event_container">
@@ -14,9 +15,17 @@
   <div class="grid_container">
     <h4 class="event_name">{event.name}</h4>
     <hr />
-    <div>
-      <h5 class="event_date static">Date & Time</h5>
-      <h5 class="event_date">{event.date}</h5>
+    <div class="is-flex is-flex-row is-justify-content-space-evenly is-flex-wrap-wrap">
+      <div>
+        <h5 class="event_date static">Start</h5>
+        <h5 class="event_date">{dates.start_date}</h5>
+        <h5 class="event_date">{dates.start_time}</h5>
+      </div>
+      <div>
+        <h5 class="event_date static">End</h5>
+        <h5 class="event_date">{dates.end_date}</h5>
+        <h5 class="event_date">{dates.end_time}</h5>
+      </div>
     </div>
     <div>
       <h5 class="event_location static">Location</h5>
@@ -27,7 +36,7 @@
     </div>
     <div>
       <h5 class="event_description static">Event Description</h5>
-      <h5 class="event_description">{event.description}</h5>
+      {@html event.description}
     </div>
       <div class="event_button">
         <Button class="events_item button" address={event.url} text={'Attend This Event →'}></Button>

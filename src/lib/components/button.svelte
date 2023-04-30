@@ -3,6 +3,9 @@
   export let address;
 </script>
 
+<!-- example usage -->
+<!-- <Button address={"/join"} text={'Join Us →'} /> -->
+
 <button class="button" type="button">
   <a class="btn" href={address}><p>{text}</p></a>
 </button>
