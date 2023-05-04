@@ -12,8 +12,8 @@
   <div class="mb-6 is-flex is-flex-direction-column is-align-items-center">
     <div class="column is-8">
       <h1 class="py-4">Advocacy</h1>
-      <h5 class="block mb-3">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</h5>
-      <h5 class="block mb-2">Fuchsia City Yellow Purugly Magmar Pokeball Furret Venomoth. Boulder Badge Spheal Gothitelle Dome Fossil Red Glameow Rhydon. Storm Badge Reshiram Pallet Town make it double Charmander Hitmonchan Herdier. Ut aliquip ex ea commodo consequat Rotom Croagunk Ash Ketchum Rampardos Tyrogue Farfetch'd.</h5>
+      <h5 class="block mb-3">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation. We enable youths and young adults to "be at the table" and advocate for their causes. We hope to ensure that youth and young adults are engaged as equal partners with system staff and leaders in policy development in creating procedural and practice changes that will influence the next generations.</h5>
+      <h5 class="block mb-2">The Advocacy work we engage in can be rougly categorized into:</h5>
       <div class="list">
         <h5>• Research</h5>
         <h5>• Policy</h5>

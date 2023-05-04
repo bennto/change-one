@@ -2,9 +2,8 @@
   import { getFileUrl } from '$lib/getFileUrl';
   import Call from '$lib/components/call_2.svelte';
   import Button from '$lib/components/button.svelte';
-  let hero = "a7f2daf7-b8c0-4620-9f55-1d4044ef84c0.jpg";
-  let img_1 = "80f02b36-9caf-4a2c-a04e-430a96ef01c3.jpg";
-  let img_2 = "2eeb8eda-3533-42d2-8c00-5c7b10c7cd38.jpg";
+  let placeholder = "b5f9e69a-ba55-4606-a0b8-e0ec32042a0b.jpg";
+  let utChapter = "61ce10ee-d469-454f-8e3b-4c549b79ffea.jpg";
 </script>
 
 <div class="contain m-0 p-0">
@@ -13,14 +12,14 @@
     <h5>Change 1 is a nonprofit organization founded to support youths transitioning out of foster care, children and families who experience the Child Welfare and Human & Health Services systems, and people working with them and their communities.</h5>
   </div>
   <div class="image_container image_border">
-    <img class="image" src={getFileUrl(hero)} loading="lazy" />
+    <img class="image" src={getFileUrl(placeholder)} alt="placeholder" loading="lazy" />
   </div>
   <div class="text">
     <h3>What We Do</h3>
     <h5>We helps foster youth, ages 15-26, realize their full potential by bridging any gaps in equal opportunities for housing, education, medical care, and employment. In doing this, we empower them to make meaningful contributions to their communities and build strong families of their own.</h5>
   </div>
   <div class="image_container image_border">
-    <img class="image" src={getFileUrl(img_1)} loading="lazy" />
+    <img class="image" src={getFileUrl(placeholder)} alt="placeholder" loading="lazy" />
   </div>
   <div class="text">
     <h3>Every Single Year...</h3>
@@ -36,21 +35,22 @@
   </div>
   <div class="grid_text border">
     <div class="left_container image_border">
-      <img class="image" src={getFileUrl(img_2)} loading="lazy" />
+      <img class="image" src={getFileUrl(placeholder)} loading="lazy" />
     </div>
     <div class="right_container">
       <h2 class="align_title">Meet Our Founder</h2>
-      <h5 class="align_sub">Pious pinnacle burying strong ocean god chaos spirit. Derive ocean christianity ascetic grandeur justice self sea faith. Chaos battle horror depths decrepit depths deceptions pinnacle christianity holiest depths overcome chaos. </h5>
+      <h5 class="align_sub">Courtney Jones is a social worker with over a decade of experience in child welfare and advocacy. But before that, she was an emancipated youth who transitioned through twenty five different homes, shelters, adoptions, and reunifications.</h5>
+      <h5 class="align_sub">Courtney founded Change 1 with the hopes of using her experiences to ensure the success of youths who are undergoing similar tribulations.</h5>
       <!-- <Button address={"/about"} text={'About our cause'}></Button> -->
     </div>
   </div>
   <div class="text">
     <h3>UT Chapter</h3>
     <h5 class="body">Change1 has joined forces with the University of Texas at Austin to help students take more part in their community. Students may directly engage in making a change via a multitude of fundraising, volunteering, and community-outreach events and opportunities. If you're a UT student, please consider...</h5>
-    <Button address={"/about"} text={'Joining the cause →'}></Button>
+    <Button address={"/join"} text={'Joining the cause →'}></Button>
   </div>
   <div class="image_container image_border">
-    <img class="image" src={getFileUrl(img_1)} loading="lazy" />
+    <img class="image" src={getFileUrl(utChapter)} loading="lazy" />
   </div>
   <Call />
 </div>
@@ -122,7 +122,7 @@
       }
       .align_sub {
         max-width: 48ch;
-        margin-bottom: 1.6em;
+        margin-bottom: 0.8em;
       }
     }
   }

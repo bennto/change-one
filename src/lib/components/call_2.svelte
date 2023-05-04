@@ -6,8 +6,8 @@
 
 
 <div class="call">
-  <h1 class="title">Help Us Do What We Do</h1>
-  <p class="desc">Our organization is still here today because of our generous volunteers, partners, and donors. Please consider supporting us so we can continue doing what we do.</p>
+  <h2 class="custom_title mb-4">Help Us Do What We Do</h2>
+  <p class="desc">Our organization is still here today because of our generous volunteers, partners, and donors. If you're interested in our cause, please consider supporting us by volunteering, donating, or working with us.</p>
   <div class="call_buttons">
     <div class="button_container">
       <Button address={"/join"} text={'Join Us →'} />
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 40em;
+    max-width: 39em;
     padding: 0 2em;
     margin: 0 auto 80px auto;
     .title {

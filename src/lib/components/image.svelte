@@ -1,10 +1,10 @@
 <script>
   import { getFileUrl } from "$lib/getFileUrl.js";
-  export let url;
+  export let url, alt;
 </script>
 
 <figure class="image_container image_border">
-  <img class="image" src={getFileUrl(url)} loading="lazy" />
+  <img class="image" src={getFileUrl(url)} alt={alt} />
 </figure>
 
 <style lang="scss">

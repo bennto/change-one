@@ -6,7 +6,7 @@
 
 <div class="call border">
   <div class="text">
-    <h1 class="title">Help Us Do What We Do</h1>
+    <h2 class="custom_title mb-4">Help Us Do What We Do</h2>
     <div class="sub_section">
       <p class="desc">Our organization is still here today because of our generous volunteers, partners, and donors. Please consider supporting us so we can continue doing what we do.</p>
       <div class="call_buttons">

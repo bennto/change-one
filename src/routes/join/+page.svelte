@@ -21,45 +21,7 @@
       <p>• And more!</p>
     </div>
     <h2 class="mt-2">Donors</h2>
-    <p>Change 1 provides support to a number of foster alumni, many of which lack daily necessities. We would greatly appreciate any donations that could go to support our youth. Some of the items we seek include but are not limited to:</p>
-    <div class="item_list">
-      <p class="item_genre">Hygiene Products</p>
-      <div>
-        <p>Hand Soap</p>
-        <p>Body wash</p>
-        <p>Shampoo & Conditioner</p>
-        <p>Lotion</p>
-        <p>Conditioner</p>
-        <p>Shaving products</p>
-        <p>Deoderant</p>
-        <p>Combs & brushes</p>
-        <p>Feminine products</p>
-        <p>First aid items</p>
-      </div>
-    </div>
-    <div class="item_list">
-      <p class="item_genre">Kitchen Items</p>
-      <div>
-        <p>Plastic wrap</p>
-        <p>Ziploc bags</p>
-        <p>Pots & Pans</p>
-        <p>Plastic utensils</p>
-        <p>Dish soap</p>
-        <p>Electronic cooking appliances (eg. air fryer)</p>
-        <p>Seasonings</p>
-        <p>Canned food</p>
-      </div>
-    </div>
-    <div class="item_list">
-      <p class="item_genre">Household Items</p>
-      <div>
-        <p>Furniture</p>
-        <p>Major appliances</p>
-        <p>Electronic devices</p>
-        <p>Rugs & Carpeting</p>
-        <p>Cleaning supplies</p>
-      </div>
-    </div>
+    <p>Change 1 provides support to a number of foster alumni, many of which lack daily necessities. We would greatly appreciate any donations that could go to support our youth. Please check out our interest form for common necessities or donate to us directly via Paypal.</p>
     <div class="my-5 interest_forms">
       <h2>Interest Forms</h2>
       <div>

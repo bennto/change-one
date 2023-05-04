@@ -12,15 +12,15 @@
   <div class="mb-6 is-flex is-flex-direction-column is-align-items-center">
     <div class="column is-8">
       <h1 class="py-4">Public Education</h1>
-      <h5 class="block">Change 1 provides basic education about the foster care system and encourages the community to be an active partner in the lives of youth in foster care. It takes an inclusive approach with gender and racial equity in educating the community at large as well as the network of child welfare, juvenile justice, mental health, and education systems.  Through speaking engagements, consultations, trainings, and policy council participation at local, state and national levels, Change 1 aims to bridge the gap between systems, emphasizing education, coordination and collaboration among all providers.</h5>
+      <h5 class="block">Change 1 is a non-profit organization that seeks to raise awareness about the challenges faced by young adults who are aging out of foster care. As they transition to independent adulthood, these individuals often lack the support and resources that many of us take for granted. Change 1 aims to educate the public about these unique challenges and create a more supportive and inclusive society for all young adults, regardless of their background.</h5>
     </div>
     <div class="image_container column is-8 pw-2 m-0">
       <Image url={placeholder} />
     </div>
     <div class="column is-8">
-      <p class="block mb-5">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
-      <p class="block mb-5">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
-      <p class="block mb-5">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table. It aims to influence the environment of systems, ensuring that youth and young adults are engaged as equal partners with system staff and leaders in policy development and procedural and practice changes.</p>
+      <h3 class="pb-2">Restorative Practices</h3>
+      <p class="block mb-2">A major part of Change 1's mission is to improve the Child Welfare system within the US. Restorative Practices goes towards fulfilling that goal, providing a framework for individuals working in the Child Welfare system to foster peaceful and productive relationships with children in the system.</p>
+      <p class="block mb-2">Change 1's founder, Courtney Jones, holds a biannual Restorative Practices workshop in Austin, TX. The workshop is geared towards professionals who work with children or young adults, succh as child welfare, education, law enforcement, and counselling. For those interested in participating, please check our events page for upcoming events or contact us directly via our email.</p>
     </div>
   </div>
   <Call />

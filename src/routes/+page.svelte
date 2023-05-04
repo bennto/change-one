@@ -5,15 +5,18 @@
   import Image from '$lib/components/image.svelte';
   import { getFileUrl } from '$lib/getFileUrl';
 
-  let article2 = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
+  let changeFamily = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
+  let utChapter = "61ce10ee-d469-454f-8e3b-4c549b79ffea.jpg";
   let placeholder = "2ef8bd5b-3e86-4af0-b92b-f60782eb6699.jpeg";
   
   export let data;
   let events = data.events;
 </script>
+
+<!-- Home Page -->
 <main class="main_container">
   <div class="hero section p-0 hero border">
-    <Image url={article2} />
+    <Image url={changeFamily} alt="Change One and volunteers together at an event"/>
     <div class="right_container my-auto p-5">
       <h1 class="align_title py-4">Change One Mind. Change 1 Life.</h1>
       <h5 class="align_sub pb-4">We are a nonprofit organization dedicated to advocating for and building community with post-foster care alumni.</h5>
@@ -22,7 +25,7 @@
   </div>
   <div class="video section border is-flex is-flex-direction-column is-align-items-center">
     <h3 class="center_text pb-2">We Are Change 1</h3>
-    <img class="image_border frame p-0" src={getFileUrl(placeholder)} loading="lazy" />
+    <iframe width="532" height="300" src="https://www.youtube.com/embed/gNz7eNAwvic" title="Change One Mind Change One Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <div class="section events border">
     <div class="events_head">
@@ -33,14 +36,14 @@
       </div>
     </div>
     <div class="events_list">
-      {#each events.slice(0, 4) as event}
+      {#each events.slice(0, 3) as event}
         <Card class="event_card" event={event}></Card>
       {/each}
     </div>
   </div>
   <div class="section p-0 chapter border">
     <div class="image_container image_border">
-      <img class="image" src={getFileUrl(article2)} loading="lazy" />
+      <img class="image" src={getFileUrl(utChapter)} alt={"Courtney and Change 1's UT Austin members at Basil Thai"} loading="lazy" />
     </div>
     <div class="text_container">
       <h2>UT Austin Chapter</h2>
@@ -60,11 +63,6 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         grid-gap: 0 1rem;
-      }
-      &.video {
-        .frame {
-          width: 50vw;
-        }
       }
       &.events {
           padding: 2rem 1rem 3rem 1rem;

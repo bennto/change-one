@@ -1,4 +1,5 @@
 import { getDirectusClient } from "$lib/directus.js";
+import { getDate } from "$lib/getDate.js";
 
 export async function load() {
   const directus = await getDirectusClient();
@@ -15,6 +16,11 @@ export async function load() {
     };
   }
   const events = response.data;
+  response.data.map((event) => {
+    const startDate = new Date(event.start_date);
+    let output = getDate(startDate);
+    event.start_date = output;
+  });
   return {
     events,
   };
