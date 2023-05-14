@@ -2,12 +2,13 @@
   import Call from '$lib/components/call_2.svelte';
   import Image from '$lib/components/image.svelte';
   import { getFileUrl } from "$lib/getFileUrl.js"
-  let placeholder = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
+  let banner = "bb97a2da-b9aa-4bbb-a94f-8a5d803919ab.jpg";
+  let hero = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
 </script>
 
 <div class="advocacy_container">
   <figure class="image_container image_border">
-    <img class="image" src={getFileUrl(placeholder)} loading="lazy" />
+    <img class="image" src={getFileUrl(banner)} loading="lazy" />
   </figure>
   <div class="mb-6 is-flex is-flex-direction-column is-align-items-center">
     <div class="column is-8">
@@ -15,7 +16,7 @@
       <h5 class="block">Change 1 is a non-profit organization that seeks to raise awareness about the challenges faced by young adults who are aging out of foster care. As they transition to independent adulthood, these individuals often lack the support and resources that many of us take for granted. Change 1 aims to educate the public about these unique challenges and create a more supportive and inclusive society for all young adults, regardless of their background.</h5>
     </div>
     <div class="image_container column is-8 pw-2 m-0">
-      <Image url={placeholder} />
+      <Image url={hero} />
     </div>
     <div class="column is-8">
       <h3 class="pb-2">Restorative Practices</h3>

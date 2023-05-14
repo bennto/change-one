@@ -3,12 +3,12 @@
   import Image from '$lib/components/image.svelte';
   import { getFileUrl } from "$lib/getFileUrl.js"
   import Icon from "$lib/assets/placeholder_icon.jpg";
-  let placeholder = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
+  let banner = "9cfe6148-c082-4919-931b-47e33e295885.jpg";
 </script>
 
 <div class="advocacy_container">
   <figure class="image_container image_border">
-    <img class="image" src={getFileUrl(placeholder)} loading="lazy" alt="placeholder" />
+    <img class="image" src={getFileUrl(banner)} loading="lazy" alt="placeholder" />
   </figure>
   <div class="mb-6 is-flex is-flex-direction-column is-align-items-center">
     <div class="column is-8">
@@ -44,15 +44,50 @@
     <h2 class="pt-4">Our Process</h2>
     <div class="column is-8 mb-4">
       <h3 class="pb-2">Intake</h3>
-      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <p class="block mb-2">Before we can provide support, clients must fill out an intake form with their primary information and desired support. The intake form can be found at the bottom of this page. The client should send the intake form to <a href="mailto:volunteer@change1.org" class="has-text-link">this email</a>, after which we will review and either accept or deny the request.</p>
       <h3 class="pb-2">Documentation</h3>
-      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <p class="block mb-2">One of our support managers will help the client fill out a second, more extensive form including the client's personal and medical information.</p>
+      <p class="block mb-2">We will also need a letter verifying that the client was previously in foster care from one of the following sources:</p>
+      <div class="list mb-2">
+        <p>• Preperation for Adult Living (PAL)</p>
+        <p>• Child Protective Services (CPS)</p>
+        <p>• Third-party agency (eg. Lifeworks, Austin Children Center, etc.)</p>
+      </div>
       <h3 class="pb-2">Assessment</h3>
-      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <p class="block mb-2">A support manager will help the client fill out a third, even more extensive form detailing the client's history within the Child Welfare System and the fields in which the client requires support. Areas where we can provide support include:</p>
+      <div class="list mb-2 columns">
+        <div class="column">
+          <p>• Education & Employment</p>
+          <p>• Healthcare</p>
+          <p>• Housing</p>
+        </div>
+        <div class="column">
+          <p>• Transportation</p>
+          <p>• Banking & Finances</p>
+          <p>• Food Insecurity</p>
+        </div>
+      </div>
       <h3 class="pb-2">Assignment</h3>
-      <p class="block mb-2">Change 1 advocates to raise the voices of those with lived experience in the foster care system by actively including them in the process of enhancing policy, research, and legislation.  Change 1 creates opportunities for youth and young adults to "be at the table" -- and to train them how to be at the table.</p>
+      <p class="block mb-2">We will assign the client a support manager to help them in achieving the goals determined in the Assessment Phase. Criteria in the assignment of support managers include:</p>
+      <div class="list mb-2 columns">
+        <div class="column">
+          <h5 class="mb-1">Client preference</h5>
+          <p>• Gender</p>
+          <p>• Race and ethnicity</p>
+          <p>• Shared experience</p>
+        </div>
+        <div class="column">
+          <h5 class="mb-1">Manager preference</h5>
+          <p>• Expertise</p>
+          <p>• Skills</p>
+          <p>• Interests</p>
+        </div><div class="column">
+          <h5 class="mb-1">Miscellaneous</h5>
+          <p>• Personality match</p>
+        </div>
+      </div>
     </div>
-    <Button address={"/join"} text={'Support Form'} />
+    <Button address={""} text={'Intake Form'} />
   </div>
 </div>
 

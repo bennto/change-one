@@ -1,3 +1,10 @@
+<script>
+  let instagram = "https://www.instagram.com/change1mindchange1life/";
+  let facebook = "https://www.facebook.com/change1austintexas/";
+  let linktree = "https://linktr.ee/change1one";
+  let email = "volunteer@change1.org";
+</script>
+
 <div class="footer">
   <div class="head_container">
     <h4>Change 1.</h4>
@@ -5,10 +12,13 @@
   </div>
   <hr />
   <div class="icon_container">
-    <a><h5>Instagram</h5></a>
-    <a><h5>Facebook</h5></a>
-    <a><h5>Twitter</h5></a>
-    <a><h5>Email</h5></a>
+    <div class="links">
+      <a href={instagram} target="_blank" rel="noreferrer"><h5>Instagram</h5></a>
+      <a href={facebook} target="_blank" rel="noreferrer"><h5>Facebook</h5></a>
+      <a href={linktree} target="_blank" rel="noreferrer"><h5>Linktree</h5></a>
+    </div>
+    <a><h5 on:click={() => {
+      alert(email);}}>{email}</h5></a>
   </div>
 </div>
 
@@ -37,24 +47,29 @@
       display: flex;
       flex-direction: row;
       align-items: center;
+      width: 100%;
     }
     .head_container {
-      width: 100%;
       justify-content: space-between;
     }
     .icon_container {
-      justify-content: center;
+      justify-content: space-between;
       gap: 1.4em;
       a, h5 {
-        font-weight: 300;
-        font-size: 0.8em;
         cursor: pointer;
       }
       h5 {
+        font-weight: 300;
+        font-size: 14px;
         transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
         &:hover {
           font-weight: 700;
         }
+      }
+      .links {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
       }
     }
 

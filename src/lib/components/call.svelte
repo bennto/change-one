@@ -45,7 +45,7 @@
       .sub_section {
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
-        gap: 1em;
+        gap: 2em;
         .call_buttons > .button_container {
             margin-bottom: 1em;
         }

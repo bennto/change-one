@@ -5,7 +5,7 @@
 </script>
 
 
-<div class="call">
+<div class="call column is-8">
   <h2 class="custom_title mb-4">Help Us Do What We Do</h2>
   <p class="desc">Our organization is still here today because of our generous volunteers, partners, and donors. If you're interested in our cause, please consider supporting us by volunteering, donating, or working with us.</p>
   <div class="call_buttons">
@@ -28,8 +28,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 39em;
-    padding: 0 2em;
     margin: 0 auto 80px auto;
     .title {
       margin-bottom: 0.6em;
@@ -40,7 +38,7 @@
       flex-direction: row;
       flex-wrap: wrap;
       .button_container {
-        margin: 40px 1em;
+        margin: 20px 1em;
       }
     }
   }

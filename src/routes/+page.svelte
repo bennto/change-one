@@ -25,9 +25,13 @@
   </div>
   <div class="video section border is-flex is-flex-direction-column is-align-items-center">
     <h3 class="center_text pb-2">We Are Change 1</h3>
-    <iframe width="532" height="300" src="https://www.youtube.com/embed/gNz7eNAwvic" title="Change One Mind Change One Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h5 class="body pb-2 px-12">Change 1 helps Foster Youth ages 15-26 realize their full potential. By bridging the gaps in the support they receive entering adulthood, we empower their dreams of making meaningful contributions to their communities and having strong families of their own.</h5>
+    <hr />
+    <h5 class="body pb-2 px-12">Are you a foster youth or alumni seeking help? Don't hesitate to:</h5>
+    <Button address={"/support-services"} text={'Let Us Help'}></Button>
+    <iframe class="mt-4" width="532" height="300" src="https://www.youtube.com/embed/gNz7eNAwvic" title="Change One Mind Change One Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
-  <div class="section events border">
+  <!-- <div class="section events border">
     <div class="events_head">
       <h3 class="events_item events_title">Upcoming Events</h3>
       <p class="events_item events_body">We host a number of events throughout the year. No matter who you are, don’t hesitate to come out and meet the community!</p>
@@ -40,14 +44,14 @@
         <Card class="event_card" event={event}></Card>
       {/each}
     </div>
-  </div>
+  </div> -->
   <div class="section p-0 chapter border">
     <div class="image_container image_border">
       <img class="image" src={getFileUrl(utChapter)} alt={"Courtney and Change 1's UT Austin members at Basil Thai"} loading="lazy" />
     </div>
     <div class="text_container">
-      <h2>UT Austin Chapter</h2>
-      <p>We’re also a student organization at the University of Texas at Austin! If you’re a student looking to make a difference, we’d love to have you!</p>
+      <h2>Volunteer with Us</h2>
+      <p>We're a small group of passionate folk looking to make an impact in Child Welfare. If you're interested, please consider volunteering with us. We'd love to have you!</p>
       <div class="chapter_button">
         <Button address={"/join"} text={'Learn more →'} />
       </div>
@@ -63,6 +67,16 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
         grid-gap: 0 1rem;
+      }
+      &.video {
+        .body {
+          max-width: 48em;
+        }
+        hr {
+          margin: 12px auto;
+          width: 6%;
+          background-color: $primary-text;
+        }
       }
       &.events {
           padding: 2rem 1rem 3rem 1rem;

@@ -2,7 +2,9 @@
   import { getFileUrl } from '$lib/getFileUrl';
   import Call from '$lib/components/call_2.svelte';
   import Button from '$lib/components/button.svelte';
-  let placeholder = "b5f9e69a-ba55-4606-a0b8-e0ec32042a0b.jpg";
+  import Founder from "$lib/assets/courtney_profile.png";
+  let hero = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
+  let needHelp = "b5f9e69a-ba55-4606-a0b8-e0ec32042a0b.jpg";
   let utChapter = "61ce10ee-d469-454f-8e3b-4c549b79ffea.jpg";
 </script>
 
@@ -12,14 +14,14 @@
     <h5>Change 1 is a nonprofit organization founded to support youths transitioning out of foster care, children and families who experience the Child Welfare and Human & Health Services systems, and people working with them and their communities.</h5>
   </div>
   <div class="image_container image_border">
-    <img class="image" src={getFileUrl(placeholder)} alt="placeholder" loading="lazy" />
+    <img class="image" src={getFileUrl(hero)} alt="placeholder" loading="lazy" />
   </div>
   <div class="text">
     <h3>What We Do</h3>
     <h5>We helps foster youth, ages 15-26, realize their full potential by bridging any gaps in equal opportunities for housing, education, medical care, and employment. In doing this, we empower them to make meaningful contributions to their communities and build strong families of their own.</h5>
   </div>
   <div class="image_container image_border">
-    <img class="image" src={getFileUrl(placeholder)} alt="placeholder" loading="lazy" />
+    <img class="image" src={getFileUrl(needHelp)} alt="placeholder" loading="lazy" />
   </div>
   <div class="text">
     <h3>Every Single Year...</h3>
@@ -35,7 +37,7 @@
   </div>
   <div class="grid_text border">
     <div class="left_container image_border">
-      <img class="image" src={getFileUrl(placeholder)} loading="lazy" />
+      <img class="image" src={Founder} loading="lazy" />
     </div>
     <div class="right_container">
       <h2 class="align_title">Meet Our Founder</h2>
@@ -94,8 +96,8 @@
     overflow: hidden;
     .image {
       object-fit: cover;
-      height: 100%;
-      min-width: 100%;
+      min-height: 100%;
+      // width: 100%;
     }
   }
   .grid_text {

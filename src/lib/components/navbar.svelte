@@ -79,8 +79,8 @@
             {#if dropdown}
             <div class="menu_item drop" in:slide={{ delay: 120 }} out:slide ><a href="/advocacy" ><h4>Advocacy</h4></a></div>
             <div class="menu_item drop" in:slide={{ delay: 180 }} out:slide ><a href="/public_education" ><h4>Public Education</h4></a></div>
-            <div class="menu_item drop" in:slide={{ delay: 240 }} out:slide ><a href="/support_services" ><h4>Support Services</h4></a></div>
-            <div class="menu_item drop" in:slide={{ delay: 300 }} out:slide ><a href="/training_consulting" ><h4>Training & Consulting</h4></a></div>
+            <div class="menu_item drop" in:slide={{ delay: 240 }} out:slide ><a href="/support-services" ><h4>Support Services</h4></a></div>
+            <div class="menu_item drop" in:slide={{ delay: 300 }} out:slide ><a href="/training" ><h4>Training</h4></a></div>
             {/if}
           </div>
           <div class="menu_item" in:fly={{ x: -10, delay: 360 }} out:fly={{ x: -10, delay: 120}} ><a href="/blog" ><h3>Blog</h3></a></div>
