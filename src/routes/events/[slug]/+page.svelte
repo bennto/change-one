@@ -34,9 +34,11 @@
         <h5 class="event_location">{event.csz}</h5>
       </div>
     </div>
-    <div>
+    <div class="event_body">
       <h5 class="event_description static">Event Description</h5>
-      {@html event.description}
+      <div class="passage">
+        {@html event.description}
+      </div>
     </div>
       <div class="event_button">
         <Button class="events_item button" address={event.url} text={'Attend This Event →'}></Button>
@@ -58,7 +60,7 @@
   .grid_container {
     display: flex;
     flex-direction: column;
-    background-color: #dbcca8;
+    background-color: rgb(224, 210, 173);
     max-width: 56vw;
     margin: 24px auto;
     padding: 1em;
@@ -75,8 +77,16 @@
     .event_date, .event_location {
       text-align: center;
     }
-    .event_description {
-      text-align: justify;
+    .event_body {
+      .event_description {
+        text-align: left;
+        margin-bottom: 1em;
+      }
+      .passage {
+          :global(p) {
+            margin-bottom: 8px;
+          }
+        }
     }
     .event_button {
       margin: 16px auto;

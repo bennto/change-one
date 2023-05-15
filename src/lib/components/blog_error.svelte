@@ -1,16 +1,16 @@
 <script>
-  import Construction from '$lib/assets/under_construction.png';
+  import Publish from '$lib/assets/publish_article.png';
   import Button from '$lib/components/button.svelte';
 </script>
 
 <div class="the-container">
   <div class="icon-container">
-    <img src={Construction} alt="A graphic design of a construction site" />
+    <img src={Publish} alt="A graphic design of a person publishing a blog article">
   </div>
   <div class="text-container">
-    <h3 class="my-title">Under Construction</h3>
+    <h3 class="my-title">No Blog Posts</h3>
     <hr />
-    <h5 class="my-body">Hey there! It seems you've discovered an unfinished part of the website.</h5>
+    <h5 class="my-body">It seems we're fresh out of blog posts...</h5>
     <Button address={"/"} text={'Go Home →'} />
   </div>
 </div>
@@ -22,6 +22,8 @@
     margin: 0 auto;
     padding: 48px 10px 0 10px;
     .icon-container {
+      max-width: 400px;
+      margin: auto;
     }
     hr {
       margin: 12px auto;

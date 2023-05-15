@@ -12,9 +12,11 @@
     <h5>Written by {author.first_name} {author.last_name}</h5>
   </div>
   <figure class="image_container image_border">
-    <img class="image" src={getFileUrl(post.thumbnail)} loading="lazy" />
+    <img class="image" src={getFileUrl(post.thumbnail)} alt="post thumbnail" loading="lazy" />
   </figure>
-  {@html post.body}
+  <div class="passage">
+    {@html post.body}
+  </div>
 </div>
 
 <style lang="scss">
@@ -26,12 +28,17 @@
       display: flex;
       align-items: center;
       height: auto;
-      margin: 10px 0;
+      margin: 24px 0;
       overflow: hidden;
       .image {
         object-fit: cover;
         height: 100%;
         min-width: 100%;
+      }
+    }
+    .passage {
+      :global(p) {
+        margin-bottom: 1em;
       }
     }
   }

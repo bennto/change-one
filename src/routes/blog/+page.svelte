@@ -1,23 +1,22 @@
 <script>
-  import { getFileUrl } from '$lib/getFileUrl.js';
   import Postcard from '$lib/components/postcard.svelte';
-  import Construction from '$lib/components/construction.svelte';
+  import BlogError from '$lib/components/blog_error.svelte';
   export let data;
   let posts = data.posts;
 </script>
 
-<!-- THE ACTUAL PAGE -->
-<div class="events_container">
-  <h1 class="title">Blog</h1>
-  <div class="card_container columns">
-    {#each posts as post}
-      <Postcard class="postcard" post={post} />
-    {/each}
+{#if posts.length > 0}
+  <div class="events_container">
+    <h1 class="title">Blog</h1>
+    <div class="card_container columns">
+      {#each posts as post}
+        <Postcard class="postcard" post={post} />
+      {/each}
+    </div>
   </div>
-</div>
-
-<!-- UNDER CONSTRUCTION ERROR -->
-<!-- <Construction /> -->
+{:else}
+  <BlogError />
+{/if}
 
 <style lang="scss">
   .events_container {

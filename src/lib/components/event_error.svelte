@@ -1,16 +1,16 @@
 <script>
-  import Construction from '$lib/assets/under_construction.png';
+  import AmusementPark from '$lib/assets/amusement_park.png';
   import Button from '$lib/components/button.svelte';
 </script>
 
 <div class="the-container">
   <div class="icon-container">
-    <img src={Construction} alt="A graphic design of a construction site" />
+    <img src={AmusementPark} alt="A graphic design of an amusement park">
   </div>
   <div class="text-container">
-    <h3 class="my-title">Under Construction</h3>
+    <h3 class="my-title">No Events</h3>
     <hr />
-    <h5 class="my-body">Hey there! It seems you've discovered an unfinished part of the website.</h5>
+    <h5 class="my-body">It seems we don't have any upcoming events scheduled at the moment.</h5>
     <Button address={"/"} text={'Go Home →'} />
   </div>
 </div>
