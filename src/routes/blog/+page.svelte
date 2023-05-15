@@ -7,17 +7,17 @@
 </script>
 
 <!-- THE ACTUAL PAGE -->
-<!-- <div class="events_container">
+<div class="events_container">
   <h1 class="title">Blog</h1>
   <div class="card_container columns">
     {#each posts as post}
       <Postcard class="postcard" post={post} />
     {/each}
   </div>
-</div> -->
+</div>
 
 <!-- UNDER CONSTRUCTION ERROR -->
-<Construction />
+<!-- <Construction /> -->
 
 <style lang="scss">
   .events_container {

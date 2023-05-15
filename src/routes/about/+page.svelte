@@ -41,8 +41,8 @@
     </div>
     <div class="right_container">
       <h2 class="align_title">Meet Our Founder</h2>
-      <h5 class="align_sub">Courtney Jones is a social worker with over a decade of experience in child welfare and advocacy. But before that, she was an emancipated youth who transitioned through twenty five different homes, shelters, adoptions, and reunifications.</h5>
-      <h5 class="align_sub">Courtney founded Change 1 with the hopes of using her experiences to ensure the success of youths who are undergoing similar tribulations.</h5>
+      <h5 class="align_sub">Cortney Jones is a social worker with over a decade of experience in child welfare and advocacy. But before that, she was an emancipated youth who transitioned through twenty five different homes, shelters, adoptions, and reunifications.</h5>
+      <h5 class="align_sub">Cortney founded Change 1 with the hopes of using her experiences to ensure the success of youths who are undergoing similar tribulations.</h5>
       <!-- <Button address={"/about"} text={'About our cause'}></Button> -->
     </div>
   </div>
