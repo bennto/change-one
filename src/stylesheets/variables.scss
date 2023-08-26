@@ -1,13 +1,16 @@
 /* Variables and mixins declared here will be available in all other SCSS files */
 $sans: Inter;
-$serif: Neuton;
+$serif: Inter;
 
 // PALETTE
-$primary-text: #4d485e;
+$primary-text: #242424;
 $secondary-text: #6f6885;
-$primary-color: #b6d7aa;
-$secondary-color: #c2cfbb;
-$background-color: #f0e0ba;
+$button-text: #ffffff;
+$button-text-active: #ffffff;
 
-$border-color: #000000;
+$primary-color: #242424;
+$secondary-color: #2a55ff;
+$background-color: #ffffff;
+
+$border-color: #242424;
 $card-color: #ddc79a;

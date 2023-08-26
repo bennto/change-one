@@ -17,13 +17,13 @@
 <main class="main_container">
   <div class="hero section p-0 hero border">
     <Image
-      url={getFileUrl(changeFamily)}
+      url={changeFamily}
       alt="Change One and volunteers together at an event" />
     <div class="right_container my-auto p-5">
       <h1 class="align_title py-4">Change One Mind. Change 1 Life.</h1>
       <h5 class="align_sub pb-4">
         We are a nonprofit organization dedicated to advocating for and building
-        community with post-foster care alumni.
+        community with and for post-foster care alumni.
       </h5>
       <Button address={"/about"} text={"About our cause"} />
     </div>

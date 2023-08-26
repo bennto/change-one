@@ -1,12 +1,12 @@
 <script>
-  import { onMount } from 'svelte';
-  import { slide , fly } from 'svelte/transition';
-  import { cubicOut } from 'svelte/easing';
+  import { onMount } from "svelte";
+  import { slide, fly } from "svelte/transition";
+  import { cubicOut } from "svelte/easing";
   import Burger from "./burger.svelte";
   import { active } from "../stores.js";
 
   let activity;
-  active.subscribe(bool => {
+  active.subscribe((bool) => {
     activity = bool;
   });
   function handleClick() {
@@ -22,30 +22,31 @@
   let mobile;
   let innerWidth;
   function setDropDown() {
-    if(innerWidth <= 768) {
+    if (innerWidth <= 768) {
       dropdown = true;
       mobile = true;
     } else {
       dropdown = false;
-      mobile = false
+      mobile = false;
     }
   }
   function dropDropdown() {
-    if(!mobile) {
+    if (!mobile) {
       dropdown = !dropdown;
     }
   }
   onMount(() => {
     setDropDown();
-    addEventListener('resize', setDropDown());
-  })
+    addEventListener("resize", setDropDown());
+  });
 </script>
 
 <svelte:window bind:innerWidth />
 
 <div class="nav_container">
   <div class="navbar_container">
-    <a href="/" on:click={activity ? handleClick : ""} ><h5 class="logo">Change 1</h5></a>
+    <a href="/" on:click={activity ? handleClick : ""}
+      ><h5 class="logo">Change 1</h5></a>
     <!-- <div class="nav_links">
       <a class="nav_button" href="/about"><p>about</p></a>
       <a class="nav_button" href="/blog"><p>blog</p></a>
@@ -54,39 +55,76 @@
       <a class="nav_button" href="/partners"><p>partners</p></a>
     </div> -->
     <div>
-      <div></div>
+      <div />
       <div class="menu_hit_container">
         {#if menuHover || activity}
-        <h5 in:fly={{x:10}} out:fly={{x:10}}>menu</h5>
+          <h5 in:fly={{ x: 10 }} out:fly={{ x: 10 }}>menu</h5>
         {/if}
-        <div class="burger_container" on:mouseenter={ setMenuHover } on:mouseleave={ setMenuHover }>
+        <div
+          class="burger_container"
+          on:mouseenter={setMenuHover}
+          on:mouseleave={setMenuHover}>
           <Burger class="nav_burger" />
         </div>
       </div>
     </div>
   </div>
   {#if activity}
-    <div class="menu_container image_border" in:slide={{ delay: 100 }} out:slide={{ y:-120, duration: 600, delay: 320, easing: cubicOut }} >
+    <div
+      class="menu_container image_border"
+      in:slide={{ delay: 100 }}
+      out:slide={{ y: -120, duration: 600, delay: 320, easing: cubicOut }}>
       <div class="grid_container">
-        <div class="image_block">
-          
-        </div>
+        <div class="image_block" />
         <div class="list_container" on:click={handleClick}>
           <!-- <img class="event_image" src={getFileUrl('2eeb8eda-3533-42d2-8c00-5c7b10c7cd38.jpg')} loading="lazy" /> -->
-          <div class="menu_item" in:fly={{ x: -10, delay: 240 }} out:fly={{ x: -10, delay: 240}} ><a href="/about"><h3>About</h3></a></div>
-          <div on:mouseenter={dropDropdown} on:mouseleave={dropDropdown} >
-            <div class="menu_item" in:fly={{ x: -10, delay: 300 }} out:fly={{ x: -10, delay: 180}}><a><h3>Our Work</h3></a></div>
+          <div
+            class="menu_item"
+            in:fly={{ x: -10, delay: 240 }}
+            out:fly={{ x: -10, delay: 240 }}>
+            <a href="/about"><h3>About</h3></a>
+          </div>
+          <div on:mouseenter={dropDropdown} on:mouseleave={dropDropdown}>
+            <div
+              class="menu_item"
+              in:fly={{ x: -10, delay: 300 }}
+              out:fly={{ x: -10, delay: 180 }}>
+              <a><h3>Our Work</h3></a>
+            </div>
             {#if dropdown}
-            <div class="menu_item drop" in:slide={{ delay: 120 }} out:slide ><a href="/advocacy" ><h4>Advocacy</h4></a></div>
-            <div class="menu_item drop" in:slide={{ delay: 180 }} out:slide ><a href="/public_education" ><h4>Public Education</h4></a></div>
-            <div class="menu_item drop" in:slide={{ delay: 240 }} out:slide ><a href="/support-services" ><h4>Support Services</h4></a></div>
-            <div class="menu_item drop" in:slide={{ delay: 300 }} out:slide ><a href="/training" ><h4>Training</h4></a></div>
+              <div class="menu_item drop" in:slide={{ delay: 120 }} out:slide>
+                <a href="/advocacy"><h4>Advocacy</h4></a>
+              </div>
+              <div class="menu_item drop" in:slide={{ delay: 180 }} out:slide>
+                <a href="/public_education"><h4>Public Education</h4></a>
+              </div>
+              <div class="menu_item drop" in:slide={{ delay: 240 }} out:slide>
+                <a href="/support-services"><h4>Support Services</h4></a>
+              </div>
+              <div class="menu_item drop" in:slide={{ delay: 300 }} out:slide>
+                <a href="/training"><h4>Training</h4></a>
+              </div>
             {/if}
           </div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 360 }} out:fly={{ x: -10, delay: 120}} ><a href="/blog" ><h3>Blog</h3></a></div>
-          <div class="menu_item" in:fly={{ x: -10, delay: 420 }} out:fly={{ x: -10, delay: 60}} ><a href="/events" ><h3>Events</h3></a></div>
+          <div
+            class="menu_item"
+            in:fly={{ x: -10, delay: 360 }}
+            out:fly={{ x: -10, delay: 120 }}>
+            <a href="/blog"><h3>Blog</h3></a>
+          </div>
+          <div
+            class="menu_item"
+            in:fly={{ x: -10, delay: 420 }}
+            out:fly={{ x: -10, delay: 60 }}>
+            <a href="/events"><h3>Events</h3></a>
+          </div>
           <!-- <div class="menu_item" in:fly={{ x: -10, delay: 480 }} out:fly={{ x: -10, delay: 60}} ><a href="/partners" ><h3>Partners</h3></a></div> -->
-          <div class="menu_item" in:fly={{ x: -10, delay: 480 }} out:fly={{ x: -10}} ><a href="/join" ><h3>Join</h3></a></div>
+          <div
+            class="menu_item"
+            in:fly={{ x: -10, delay: 480 }}
+            out:fly={{ x: -10 }}>
+            <a href="/join"><h3>Join</h3></a>
+          </div>
         </div>
       </div>
     </div>
@@ -106,7 +144,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: $background-color;
-      border: 0.08em solid $primary-text;
+      border: 0.08em solid $border-color;
       border-top: none;
       border-left: none;
       border-right: none;
@@ -124,7 +162,7 @@
         transition-duration: 0.3s;
         &:hover {
           background-color: $primary-text;
-          color: $background-color
+          color: $background-color;
         }
       }
       .nav_links {
@@ -133,7 +171,7 @@
           padding: 0 1.2rem;
           text-decoration: none;
           &:hover {
-            cursor:pointer;
+            cursor: pointer;
           }
         }
         @media screen and (max-width: 640px) {
@@ -160,17 +198,17 @@
       }
       .grid_container {
         display: grid;
-        grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         // margin-left: 4.7em;
         height: 100vh;
-        border: 0.08rem solid $primary-text;
+        border: 0.08rem solid $border-color;
         margin-left: 4.73rem;
         border-top: none;
         border-right: none;
         border-bottom: none;
         overflow: hidden;
         .image_block {
-          border: 0.08rem solid $primary-text;
+          border: 0.08rem solid $border-color;
           border-left: none;
           border-top: none;
           overflow: hidden;
@@ -190,7 +228,8 @@
             transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             overflow: hidden;
             cursor: pointer;
-            h3, h4 {
+            h3,
+            h4 {
               text-align: right;
               height: 3em;
             }

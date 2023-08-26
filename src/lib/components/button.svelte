@@ -13,7 +13,7 @@
 <style lang="scss">
   .button {
     background-color: $primary-color;
-    border: 0.08rem solid $primary-text;
+    border: 0.08rem solid $border-color;
     transition-duration: 0.3s;
     max-height: 50px;
     cursor: pointer;
@@ -21,10 +21,11 @@
       transition-duration: 0.3s;
     }
     .btn > :nth-child(1) {
-      padding: 8px 0; 
+      padding: 8px 0;
+      color: $button-text;
     }
     &:hover {
-        background-color: $primary-text;
+      background-color: $secondary-color;
       :nth-child(1) {
         color: $background-color;
       }
