@@ -4,7 +4,7 @@
 </script>
 
 <figure class="image_container image_border">
-  <img class="image" src={getFileUrl(url)} alt={alt} />
+  <img class="image" src={url} {alt} />
 </figure>
 
 <style lang="scss">

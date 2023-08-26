@@ -1,14 +1,14 @@
 <script>
-  import Button from '$lib/components/button.svelte';
-  import Card from '$lib/components/card.svelte';
-  import Call from '$lib/components/call.svelte';
-  import Image from '$lib/components/image.svelte';
-  import { getFileUrl } from '$lib/getFileUrl';
+  import Button from "$lib/components/button.svelte";
+  import Card from "$lib/components/card.svelte";
+  import Call from "$lib/components/call.svelte";
+  import Image from "$lib/components/image.svelte";
+  import { getFileUrl } from "$lib/getFileUrl";
 
   let changeFamily = "3491bdaa-7f9a-42aa-8ad6-3292af72d65e.jpeg";
   let utChapter = "61ce10ee-d469-454f-8e3b-4c549b79ffea.jpg";
   let placeholder = "2ef8bd5b-3e86-4af0-b92b-f60782eb6699.jpeg";
-  
+
   export let data;
   let events = data.events;
 </script>
@@ -16,20 +16,41 @@
 <!-- Home Page -->
 <main class="main_container">
   <div class="hero section p-0 hero border">
-    <Image url={changeFamily} alt="Change One and volunteers together at an event"/>
+    <Image
+      url={getFileUrl(changeFamily)}
+      alt="Change One and volunteers together at an event" />
     <div class="right_container my-auto p-5">
       <h1 class="align_title py-4">Change One Mind. Change 1 Life.</h1>
-      <h5 class="align_sub pb-4">We are a nonprofit organization dedicated to advocating for and building community with post-foster care alumni.</h5>
-      <Button address={"/about"} text={'About our cause'}></Button>
+      <h5 class="align_sub pb-4">
+        We are a nonprofit organization dedicated to advocating for and building
+        community with post-foster care alumni.
+      </h5>
+      <Button address={"/about"} text={"About our cause"} />
     </div>
   </div>
-  <div class="video section border is-flex is-flex-direction-column is-align-items-center">
+  <div
+    class="video section border is-flex is-flex-direction-column is-align-items-center">
     <h3 class="center_text pb-2">We Are Change 1</h3>
-    <h5 class="body pb-2 px-12">Change 1 helps Foster Youth ages 15-26 realize their full potential. By bridging the gaps in the support they receive entering adulthood, we empower their dreams of making meaningful contributions to their communities and having strong families of their own.</h5>
+    <h5 class="body pb-2 px-12">
+      Change 1 helps Foster Youth ages 15-26 realize their full potential. By
+      bridging the gaps in the support they receive entering adulthood, we
+      empower their dreams of making meaningful contributions to their
+      communities and having strong families of their own.
+    </h5>
     <hr />
-    <h5 class="body pb-2 px-12">Are you a foster youth or alumni seeking help? Don't hesitate to:</h5>
-    <Button address={"/support-services"} text={'Let Us Help'}></Button>
-    <iframe class="mt-4" width="532" height="300" src="https://www.youtube.com/embed/gNz7eNAwvic" title="Change One Mind Change One Life" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h5 class="body pb-2 px-12">
+      Are you a foster youth or alumni seeking help? Don't hesitate to:
+    </h5>
+    <Button address={"/support-services"} text={"Let Us Help"} />
+    <iframe
+      class="mt-4"
+      width="532"
+      height="300"
+      src="https://www.youtube.com/embed/gNz7eNAwvic"
+      title="Change One Mind Change One Life"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen />
   </div>
   <!-- <div class="section events border">
     <div class="events_head">
@@ -47,13 +68,21 @@
   </div> -->
   <div class="section p-0 chapter border">
     <div class="image_container image_border">
-      <img class="image" src={getFileUrl(utChapter)} alt={"Courtney and Change 1's UT Austin members at Basil Thai"} loading="lazy" />
+      <img
+        class="image"
+        src={getFileUrl(utChapter)}
+        alt={"Courtney and Change 1's UT Austin members at Basil Thai"}
+        loading="lazy" />
     </div>
     <div class="text_container">
       <h2>Volunteer with Us</h2>
-      <p>We're a small group of passionate folk looking to make an impact in Child Welfare. If you're interested, please consider volunteering with us. We'd love to have you!</p>
+      <p>
+        We're a small group of passionate folk looking to make an impact in
+        Child Welfare. If you're interested, please consider volunteering with
+        us. We'd love to have you!
+      </p>
       <div class="chapter_button">
-        <Button address={"/join"} text={'Learn more →'} />
+        <Button address={"/join"} text={"Learn more →"} />
       </div>
     </div>
   </div>
@@ -79,25 +108,25 @@
         }
       }
       &.events {
-          padding: 2rem 1rem 3rem 1rem;
-          .events_head {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-            .events_item {
-              margin-right: 1rem;
-            }
-            .events_title {
-              margin-right: 2rem;
-            }
-            .events_body {
-              max-width: 24em;
-            }
-            :not(.events_title) {
-              margin-top: 1.2rem;
-            }
+        padding: 2rem 1rem 3rem 1rem;
+        .events_head {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-bottom: 2rem;
+          .events_item {
+            margin-right: 1rem;
           }
+          .events_title {
+            margin-right: 2rem;
+          }
+          .events_body {
+            max-width: 24em;
+          }
+          :not(.events_title) {
+            margin-top: 1.2rem;
+          }
+        }
         .events_list {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -142,10 +171,10 @@
           }
           .sub_section {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1em;
             .call_buttons > .button_container {
-                margin-bottom: 1em;
+              margin-bottom: 1em;
             }
           }
         }
