@@ -1,8 +1,8 @@
 <script>
-  import { page } from '$app/stores';
-  import { getFileUrl } from '$lib/getFileUrl.js';
-  import Button from '$lib/components/button.svelte'
-  
+  import { page } from "$app/stores";
+  import { getFileUrl } from "$lib/getFileUrl.js";
+  import Button from "$lib/components/button.svelte";
+
   export let data;
   let event = data.event;
   let dates = data.dates;
@@ -13,25 +13,26 @@
     <img class="event_image" src={getFileUrl(event.thumbnail)} loading="lazy" />
   </div>
   <div class="grid_container">
-    <h4 class="event_name">{event.name}</h4>
-    <hr />
-    <div class="is-flex is-flex-row is-justify-content-space-evenly is-flex-wrap-wrap">
-      <div>
+    <h3 class="event_name">{event.name}</h3>
+    <hr class="border" />
+    <div
+      class="is-flex is-flex-row is-justify-content-space-between is-flex-wrap-wrap">
+      <div class="event_start">
         <h5 class="event_date static">Start</h5>
         <h5 class="event_date">{dates.start_date}</h5>
         <h5 class="event_date">{dates.start_time}</h5>
       </div>
       <div>
+        <h5 class="event_location static">Location</h5>
+        <div>
+          <h5 class="event_location">{event.address}</h5>
+          <h5 class="event_location">{event.csz}</h5>
+        </div>
+      </div>
+      <div class="event_end">
         <h5 class="event_date static">End</h5>
         <h5 class="event_date">{dates.end_date}</h5>
         <h5 class="event_date">{dates.end_time}</h5>
-      </div>
-    </div>
-    <div>
-      <h5 class="event_location static">Location</h5>
-      <div>
-        <h5 class="event_location">{event.address}</h5>
-        <h5 class="event_location">{event.csz}</h5>
       </div>
     </div>
     <div class="event_body">
@@ -40,9 +41,12 @@
         {@html event.description}
       </div>
     </div>
-      <div class="event_button">
-        <Button class="events_item button" address={event.url} text={'Attend This Event →'}></Button>
-      </div>
+    <div class="event_button">
+      <Button
+        class="events_item button"
+        address={event.url}
+        text={"Attend This Event →"} />
+    </div>
   </div>
 </div>
 
@@ -60,13 +64,13 @@
   .grid_container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(224, 210, 173);
+    background-color: $card-color;
     max-width: 56vw;
     margin: 24px auto;
-    padding: 1em;
-    gap: 24px 0; 
+    padding: 2em;
+    gap: 8px 0;
     border-radius: 0.3em;
-    hr {
+    .border {
       border-color: $border-color;
       margin: 0.3em 0;
       opacity: 0.4;
@@ -74,25 +78,30 @@
     .event_name {
       text-align: center;
     }
-    .event_date, .event_location {
+    .event_location {
       text-align: center;
+    }
+    .event_start {
+      text-align: left;
+    }
+    .event_end {
+      text-align: right;
     }
     .event_body {
       .event_description {
         text-align: left;
-        margin-bottom: 1em;
+        margin: 1em 0 0.5em 0;
       }
       .passage {
-          :global(p) {
-            margin-bottom: 8px;
-          }
+        :global(p) {
+          margin-bottom: 8px;
         }
+      }
     }
     .event_button {
       margin: 16px auto;
     }
     .static {
-      text-align: center;
       font-weight: 700;
     }
   }
